@@ -1,0 +1,191 @@
+$green: #64ffda;
+$slate: #8892b0;
+$light-slate: #a8b2d1;
+$lightest-slate: #ccd6f6;
+$navy: #0a192f;
+$light-navy: #172a45;
+$lightest-navy: #303C55;
+$navy-shadow: rgba(2,12,27,0.7);
+
+/*
+@mixin hamburger-menu-style {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: $green;
+    transition: transform .35s ease-in-out, opacity .2s linear;
+}
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: $navy;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    width: 100vw;
+
+    &__logo-text {
+        color: $green;
+        font-size: 4rem;
+        font-family: 'Abril Fatface', cursive;
+    }
+
+    &__navigation {
+        position: relative;
+
+        &-nav-toggle {
+            background: none;
+            padding: 20px 15px;
+            border: none;
+            outline: none;
+            position: relative;
+            z-index: 10;
+            border-radius: 3px;
+
+
+            &-hamburger {
+                display: block;
+                position: relative;
+                left: 0;
+                width: 23px;
+                height: 2px;
+                background: $green;
+                transition: transform .35s ease-in-out, opacity .2s linear;
+                transform: rotate(180deg);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 10px;
+                    display: block;
+                    width: 17px;
+                    height: 2px;
+                    background: $green;
+                    transition: transform .35s ease-in-out, opacity .2s linear;
+                    // @include hamburger-menu-style;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 10px;
+                    display: block;
+                    width: 30px;
+                    height: 2px;
+                    background: $green;
+                    transform: rotate(180deg);
+                    transition: transform .35s ease-in-out, opacity .2s linear;
+                    // @include hamburger-menu-style;
+                }
+            }
+
+        }
+
+
+        &-sections-list {
+            position: fixed;
+            right: -100vw;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $light-navy;
+            list-style-type: none;
+
+            & > li > a {
+                font-family: 'Roboto Mono', monospace;
+                display: block;
+                text-decoration: none;
+                color: $light-slate;
+                font-weight: 500;
+                font-size: 1.8rem;
+                margin-top: 8rem;
+                letter-spacing: 1.5px;
+
+                &:hover {
+                    color: $green;
+                }
+
+
+                & sup {
+                    color: $green;
+                    display: block;
+                    text-align: center;
+                    font-weight: 300;
+                    font-size: 1.6rem;
+                }
+            }
+
+            &-social {
+                display: flex;
+                
+                & > a > img {
+                    font-size: 1.4rem;
+                }
+            }
+
+        }
+
+
+    }
+
+    &.nav-open &__navigation-nav-toggle-hamburger {
+        transform: rotate(45deg);
+        width: 30px;
+
+        &::before {
+            opacity: 0;
+            width: 30px;
+        }
+
+        &::after {
+            transform: rotate(90deg) translateX(-10px);
+        }
+    }
+
+
+}
+
+@keyframes slideInRight {
+    0% {
+        right: 100vw;
+    }
+    50% {
+        right: 50vw;
+    }
+    100% {
+        right: 0
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        right: 0;
+    }
+    50% {
+        right: 50vw;
+    }
+    100% {
+        right: 100vw;
+    }
+}
+
+
