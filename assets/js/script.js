@@ -1,8 +1,10 @@
 let navToggleButton = document.querySelector(".nav-toggle");
+let navLinks = document.querySelectorAll(".nav-links");
 
-navToggleButton.addEventListener("click", () => {
+function handleNavigationToggle() {
     let header = document.getElementById("header");
     let sectionsList = document.querySelector(".header__navigation-sections-list");
+    
     if (header.className.includes("nav-open")) {
         sectionsList.style.animation = "slideOut .4s linear";
         sectionsList.style.top = 0;
@@ -18,7 +20,6 @@ navToggleButton.addEventListener("click", () => {
     if (header.className.includes("nav-closed")) {
         sectionsList.style.right = "-100vw";
     }
-
-});
+}
 
 
