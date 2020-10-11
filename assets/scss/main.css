@@ -153,10 +153,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 200px;
 }
 
-.header__navigation-sections-list-social > a > img {
-  font-size: 1.4rem;
+.header__navigation-sections-list-social > a > svg {
+  fill: #64ffda;
 }
 
 .header.nav-open .header__navigation-nav-toggle-hamburger {
@@ -496,9 +500,9 @@ body {
 }
 
 .section__contact-heading-secondary {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #ccd6f6;
-  margin: 3rem 0;
+  margin: 8rem 0 5rem 0;
   width: 200px;
   text-align: center;
 }
@@ -549,6 +553,6 @@ footer .rights {
   text-align: center;
   font-size: 1.3rem;
   color: #64ffda;
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto 1rem auto;
 }
 /*# sourceMappingURL=main.css.map */
