@@ -36,9 +36,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px 0;
+    margin: 0 auto;
     position: relative;
-    width: 100vw;
+    width: 90vw;
 
     &__logo-text {
         color: $green;
@@ -96,7 +97,6 @@ body {
             }
 
         }
-
 
         &-sections-list {
             position: fixed;
@@ -213,6 +213,10 @@ body {
     text-align: right;
 }
 
+.align-left {
+    text-align: left;
+}
+
 .align-center {
     text-align: center;
 }
@@ -254,16 +258,48 @@ body {
     }
 }
 
+.section-heading-primary {
+    color: $light-slate;
+    font-size: 2.4rem;
+    margin-left: 1.4rem;
 
+    & .section-number {
+        color: $green;
+        font-weight: 300;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        margin: 2rem auto;
+        width: 50px;
+        height: 1px;
+        background-color: $slate;
+        margin-bottom: 5px;
+    }
+}
+
+.flex-right {
+    align-items: flex-end;
+}
+
+.flex-left {
+    align-items: flex-start;
+}
 
 .section-projects {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8rem;
 
+    & .project {
+        margin-bottom: 6rem;
+    }
 
     & .image__background {
         width: 300px;
         height: 500px;
-        margin: 6rem auto 0 auto;
-        background-image: url(../img/raab.jpg);
+        margin: 7rem auto 0 auto;
         background-size: cover;
         background-attachment: fixed;
 
@@ -275,7 +311,7 @@ body {
             background: rgba($navy, .9);
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            justify-content: center;
 
 
             & .section-heading-secondary {
@@ -302,27 +338,126 @@ body {
                 }
             }
 
+            & .links {
+                list-style-type: none;
+                display: flex;
+                margin-top: 1rem;
+
+                & > li:last-child {
+                    margin-left: 2rem;
+                }
+                
+                & > li > a {
+                    color: $lightest-slate;
+                    text-decoration: none;
+                    font-size: 1.6rem;
+
+                    & > svg {
+                        fill: $lightest-slate;
+                    }
+                }
+            }
 
         }
     }
 }
 
-.section-heading-primary {
-    color: $light-slate;
-    font-size: 2.4rem;
-    margin-left: 1.4rem;
+.raab {
+    background-image: url(../img/raab.jpg);
+}
 
-    & .section-number {
-        color: $green;
+.mobilnifarmer {
+    background-image: url(../img/MobilniFarmer.jpg);
+}
+
+.cirichomeinvest {
+    background-image: url(../img/cirichomeinvest.jpg);
+}
+
+.section-about {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 9rem auto;
+    width: 95%;
+
+    & img {
+        width: 280px;
+        margin: 4rem auto;
+        border: 3px solid $lightest-slate;
+        border-radius: 3px;
+        padding: 3rem;
     }
 
-    &::after {
-        content: "";
+    & .technologies {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 4rem 0;
+
+        & > li {
+            list-style-type: none;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        & > li > a {
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: $lightest-slate;
+            display: block;
+            padding: 15px 0;
+        }
+    }
+}
+
+.section__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+
+    &-heading-secondary {
+        font-size: 2rem;
+        color: $lightest-slate;
+        margin: 3rem 0;
+        width: 200px;
+        text-align: center;
+    }
+
+    & .link-button {
+        margin: 4rem 0;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & .social-links {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        list-style-type: none;
+
+        & > li > a {
+            font-size: 1.5rem;
+            color: $light-slate;
+            text-decoration: none;
+
+            & svg {
+                fill: $lightest-slate;
+            }
+        }
+    }
+
+    & .rights {
         display: block;
-        margin: 2rem auto;
-        width: 50px;
-        height: 1px;
-        background-color: $slate;
-        margin-bottom: 5px;
+        width: 250px;
+        text-align: center;
+        font-size: 1.3rem;
+        color: $green;
+        margin: 2rem auto 0 auto;
     }
 }

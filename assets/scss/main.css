@@ -33,9 +33,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px;
+  padding: 10px 0;
+  margin: 0 auto;
   position: relative;
-  width: 100vw;
+  width: 90vw;
 }
 
 .header__logo-text {
@@ -247,6 +248,10 @@ body {
   text-align: right;
 }
 
+.align-left {
+  text-align: left;
+}
+
 .align-center {
   text-align: center;
 }
@@ -297,11 +302,58 @@ body {
   text-align: center;
 }
 
+.section-heading-primary {
+  color: #a8b2d1;
+  font-size: 2.4rem;
+  margin-left: 1.4rem;
+}
+
+.section-heading-primary .section-number {
+  color: #64ffda;
+  font-weight: 300;
+}
+
+.section-heading-primary::after {
+  content: "";
+  display: block;
+  margin: 2rem auto;
+  width: 50px;
+  height: 1px;
+  background-color: #8892b0;
+  margin-bottom: 5px;
+}
+
+.flex-right {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.flex-left {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.section-projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 8rem;
+}
+
+.section-projects .project {
+  margin-bottom: 6rem;
+}
+
 .section-projects .image__background {
   width: 300px;
   height: 500px;
-  margin: 6rem auto 0 auto;
-  background-image: url(../img/raab.jpg);
+  margin: 7rem auto 0 auto;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -319,9 +371,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section-projects .image__background-overlay .section-heading-secondary {
@@ -352,23 +404,151 @@ body {
   font-weight: 300;
 }
 
-.section-heading-primary {
-  color: #a8b2d1;
-  font-size: 2.4rem;
-  margin-left: 1.4rem;
+.section-projects .image__background-overlay .links {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
 }
 
-.section-heading-primary .section-number {
-  color: #64ffda;
+.section-projects .image__background-overlay .links > li:last-child {
+  margin-left: 2rem;
 }
 
-.section-heading-primary::after {
-  content: "";
+.section-projects .image__background-overlay .links > li > a {
+  color: #ccd6f6;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.section-projects .image__background-overlay .links > li > a > svg {
+  fill: #ccd6f6;
+}
+
+.raab {
+  background-image: url(../img/raab.jpg);
+}
+
+.mobilnifarmer {
+  background-image: url(../img/MobilniFarmer.jpg);
+}
+
+.cirichomeinvest {
+  background-image: url(../img/cirichomeinvest.jpg);
+}
+
+.section-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto 9rem auto;
+  width: 95%;
+}
+
+.section-about img {
+  width: 280px;
+  margin: 4rem auto;
+  border: 3px solid #ccd6f6;
+  border-radius: 3px;
+  padding: 3rem;
+}
+
+.section-about .technologies {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin: 4rem 0;
+}
+
+.section-about .technologies > li {
+  list-style-type: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+.section-about .technologies > li > a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #ccd6f6;
   display: block;
-  margin: 2rem auto;
-  width: 50px;
-  height: 1px;
-  background-color: #8892b0;
-  margin-bottom: 5px;
+  padding: 15px 0;
+}
+
+.section__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.section__contact-heading-secondary {
+  font-size: 2rem;
+  color: #ccd6f6;
+  margin: 3rem 0;
+  width: 200px;
+  text-align: center;
+}
+
+.section__contact .link-button {
+  margin: 4rem 0;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  list-style-type: none;
+}
+
+footer .social-links > li > a {
+  font-size: 1.5rem;
+  color: #a8b2d1;
+  text-decoration: none;
+}
+
+footer .social-links > li > a svg {
+  fill: #ccd6f6;
+}
+
+footer .rights {
+  display: block;
+  width: 250px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #64ffda;
+  margin: 2rem auto 0 auto;
 }
 /*# sourceMappingURL=main.css.map */
