@@ -21,6 +21,10 @@ body {
   display: none;
 }
 
+.projects-link {
+  cursor: pointer;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

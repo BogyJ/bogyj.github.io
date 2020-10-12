@@ -80,7 +80,7 @@
     window.addEventListener("resize", handleNavigationToggle);
     window.addEventListener("scroll", checkScroll);
 
-    document.getElementById("projects-link").addEventListener("click", () => {
+    document.querySelector(".projects-link").addEventListener("click", () => {
         document.getElementById("projects").scrollIntoView();
     });
     
@@ -88,9 +88,9 @@
         document.getElementById("about").scrollIntoView();
     });
     
-    document.getElementById("contact-link").addEventListener("click", () => {
+    document.getElementById("projects-link").addEventListener("click", () => {
         document.getElementById("contact").scrollIntoView();
     });
-    
+
 })();
 
