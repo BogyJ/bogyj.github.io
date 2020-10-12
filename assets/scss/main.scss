@@ -21,6 +21,20 @@ html {
 
 body {
     background-color: $navy;
+    position: relative;
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: $green;
+    display: none;
+    box-shadow: 0 0 11px $navy-shadow;
 }
 
 .header {
@@ -35,6 +49,7 @@ body {
     &__logo-text {
         color: $green;
         font-size: 4rem;
+        cursor: pointer;
         font-family: 'Abril Fatface', cursive;
     }
 
@@ -257,6 +272,7 @@ body {
     & .section-number {
         color: $green;
         font-weight: 300;
+        font-family: 'Roboto Mono', monospace;
     }
 
     &::after {
@@ -456,7 +472,7 @@ footer {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     html {
         font-size: 12px;
     }
@@ -485,7 +501,7 @@ footer {
                     text-decoration: none;
                     color: $light-slate;
                     font-weight: 500;
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
                     margin-top: 0;
                     letter-spacing: 1.5px;
 
@@ -496,10 +512,11 @@ footer {
     
                     & sup {
                         color: $green;
+                        font-family: 'Roboto Mono', monospace;
                         display: inline-block;
                         text-align: center;
                         font-weight: 300;
-                        font-size: 1.4rem;
+                        font-size: 1.2rem;
                     }
                 }
     
@@ -538,6 +555,63 @@ footer {
     
         & .link-button {
             width: 180px;
+        }
+    }
+
+    .section-projects {
+        display: flex;
+        margin-bottom: 8rem;
+    
+        & .project {
+            margin-bottom: 6rem;
+            margin-top: 8rem;
+        }
+    
+        & .image__background {
+            width: 40vw;
+            height: 300px;
+            margin: 0 -20rem 0 20rem;
+            background-attachment: scroll;
+    
+            &-overlay {
+                width: 40vw;
+                height: 50%;
+                margin: 0 -45rem 0 45rem;
+                background-color: transparent;
+                padding-top: 14rem;
+    
+    
+                & .section-heading-secondary {
+                    color: #ffffff;
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+    
+                & .paragraph {
+                    margin-top: 2rem;
+                    background-color: $light-navy;
+                    padding: 2rem;
+                    box-shadow: 0 0 11px $navy-shadow;
+                }
+    
+                & .technologies-used {
+                    width: 45%;
+                    margin-top: 2rem;
+                }
+    
+            }
+        }
+
+        & .mobilnifarmer-project {
+            & .image__background {
+                display: flex;
+                flex-direction: row-reverse;
+                margin: 0 -65rem 0 65rem;
+
+                &-overlay {
+                    margin: 0 45rem 0 -45rem;
+                }
+            }
         }
     }
 
