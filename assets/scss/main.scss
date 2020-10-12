@@ -109,6 +109,7 @@ body {
             & > li > a {
                 font-family: 'Roboto Mono', monospace;
                 display: block;
+                cursor: pointer;
                 text-decoration: none;
                 color: $light-slate;
                 font-weight: 500;
