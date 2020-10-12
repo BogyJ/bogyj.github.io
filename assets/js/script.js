@@ -88,7 +88,7 @@
         document.getElementById("about").scrollIntoView();
     });
     
-    document.getElementById("projects-link").addEventListener("click", () => {
+    document.getElementById("contact-link").addEventListener("click", () => {
         document.getElementById("contact").scrollIntoView();
     });
 
