@@ -80,7 +80,7 @@
     window.addEventListener("resize", handleNavigationToggle);
     window.addEventListener("scroll", checkScroll);
 
-    document.querySelector(".projects-link").addEventListener("click", () => {
+    document.getElementById("projects-link").addEventListener("click", () => {
         document.getElementById("projects").scrollIntoView();
     });
     
