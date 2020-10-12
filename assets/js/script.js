@@ -53,7 +53,7 @@
     function handleNavigationToggle() {
         let sectionsList = document.querySelector(".header__navigation-sections-list");
         
-        if (window.innerWidth >= 1024) {
+        if (window.innerWidth >= 1025) {
             if (header.className.includes("nav-closed")) {
                 sectionsList.style.right = "0";
                 header.classList.remove("nav-closed");
@@ -79,7 +79,7 @@
     }
     
     function init() {
-        if (window.innerWidth < 1024) {
+        if (window.innerWidth < 1025) {
             navToggleButton.addEventListener("click", handleNavigationToggle);
             navLinks.forEach(el => {
                 el.addEventListener("click", handleNavigationToggle);
