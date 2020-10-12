@@ -16,18 +16,9 @@ body {
   position: relative;
 }
 
-.scroll-to-top {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  cursor: pointer;
-  font-size: 1.6rem;
-  border-radius: 5px;
-  padding: 10px 20px;
-  background-color: #64ffda;
+.left-social-icons,
+.right-email {
   display: none;
-  -webkit-box-shadow: 0 0 11px rgba(2, 12, 27, 0.7);
-          box-shadow: 0 0 11px rgba(2, 12, 27, 0.7);
 }
 
 .header {
@@ -463,15 +454,16 @@ body {
   width: 95%;
 }
 
-.section-about img {
+.section-about-content img {
   width: 280px;
+  display: block;
   margin: 4rem auto;
   border: 3px solid #ccd6f6;
   border-radius: 3px;
   padding: 3rem;
 }
 
-.section-about .technologies {
+.section-about-content .technologies {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -479,12 +471,9 @@ body {
   margin: 4rem 0;
 }
 
-.section-about .technologies > li {
+.section-about-content .technologies > li {
   list-style-type: none;
   border-bottom: 1px solid #ffffff;
-}
-
-.section-about .technologies > li > a {
   text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
@@ -566,11 +555,102 @@ footer .rights {
   font-size: 1.3rem;
   color: #64ffda;
   margin: 2rem auto 1rem auto;
+  font-weight: 300;
 }
 
 @media (min-width: 1024px) {
   html {
     font-size: 12px;
+  }
+  .left-social-icons {
+    position: fixed;
+    bottom: 0;
+    left: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .left-social-icons .social-icons {
+    list-style-type: none;
+    height: 240px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .left-social-icons .social-icons li > a {
+    text-decoration: none;
+  }
+  .left-social-icons .social-icons li > a svg {
+    fill: #ccd6f6;
+  }
+  .left-social-icons .line {
+    margin-top: 1rem;
+    height: 250px;
+    width: 2px;
+    background-color: #64ffda;
+  }
+  .right-email {
+    position: fixed;
+    bottom: 0;
+    right: -48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .right-email > a {
+    -webkit-transform: rotate(90deg) translateY(-3px);
+            transform: rotate(90deg) translateY(-3px);
+    font-size: 1.1rem;
+    display: block;
+    margin: 0 auto;
+    color: #ccd6f6;
+  }
+  .right-email .line {
+    margin-top: 11rem;
+    height: 250px;
+    width: 2px;
+    background-color: #64ffda;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    background: rgba(23, 42, 69, 0.8);
+    width: 100vw;
+    height: 100px;
+    -webkit-transition: top .2s ease;
+    transition: top .2s ease;
+  }
+  .header.hide {
+    top: -100px;
   }
   .header__navigation {
     position: relative;
@@ -623,7 +703,7 @@ footer .rights {
     width: 50vw;
     padding-left: 0;
     margin-left: 30rem;
-    margin-top: 2.4rem;
+    margin-top: 15rem;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -694,6 +774,90 @@ footer .rights {
   }
   .section-projects .mobilnifarmer-project .image__background-overlay {
     margin: 0 45rem 0 -45rem;
+  }
+  .section-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto 9rem auto;
+    width: 95%;
+  }
+  .section-about-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 10rem auto 0 auto;
+    width: 80%;
+  }
+  .section-about-content img {
+    width: auto;
+    display: block;
+    margin: 4rem auto;
+    border: 3px solid #ccd6f6;
+    border-radius: 3px;
+    padding: 3rem;
+    margin-right: -5rem;
+    margin-left: 5rem;
+    margin-top: 20rem;
+  }
+  .section-about-content-text {
+    padding: 10px 20px;
+    height: 600px;
+    border-radius: 5px;
+    margin-right: 5rem;
+    margin-left: -5rem;
+    background-color: #172a45;
+    -webkit-box-shadow: 0 0 11px rgba(2, 12, 27, 0.7);
+            box-shadow: 0 0 11px rgba(2, 12, 27, 0.7);
+  }
+  .section__contact-heading-secondary {
+    font-size: 3rem;
+    color: #ccd6f6;
+    margin: 8rem 0 5rem 0;
+    width: 300px;
+    text-align: center;
+  }
+  .section__contact .paragraph {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 9rem;
+    border-top: 1px solid #64ffda;
+    padding-top: 2rem;
+  }
+  footer .social-links {
+    width: 50%;
+  }
+  footer .social-links > li > a svg {
+    fill: #ccd6f6;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  footer .rights {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=main.css.map */

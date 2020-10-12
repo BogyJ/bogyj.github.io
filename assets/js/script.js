@@ -1,27 +1,45 @@
 (function() {
     let navToggleButton = document.querySelector(".nav-toggle");
+    let header = document.getElementById("header");
     let navLinks = document.querySelectorAll(".nav-links");
     let logo = document.querySelector(".home");
-    let scrollToTopBtn = document.querySelector(".scroll-to-top");
-    
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
+    let currentScroll = previousScroll = window.scrollY || document.documentElement.scrollTop;
+    let currentDirection = previousDirection = 0;
+
+    function toggleHeader() {
+        if (currentDirection === 2) {
+            header.classList.add("hide");
+        }
+
+        if (currentDirection === 1) {
+            header.classList.remove("hide");
         }
     }
-    
-    function scrollToTop() {
+
+    function checkScroll() {
+        // 0 - initial, 1 - scroll up, 2 - scroll down
+        currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+        if (currentScroll > previousScroll) {
+            currentDirection = 2;
+        } else {
+            currentDirection = 1;
+        }
+
+        if (currentDirection !== previousDirection) {
+            toggleHeader();
+        }
+        
+        previousDirection = currentDirection;
+        previousScroll = currentScroll;
+    }
+
+    logo.addEventListener("click", () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
-    }
-    
-    scrollToTopBtn.addEventListener("click", scrollToTop);
-    logo.addEventListener("click", scrollToTop);
+    });
     
     function handleNavigationToggle() {
-        let header = document.getElementById("header");
         let sectionsList = document.querySelector(".header__navigation-sections-list");
         
         if (window.innerWidth >= 1024) {
@@ -60,7 +78,7 @@
     
     window.addEventListener("load", init);
     window.addEventListener("resize", handleNavigationToggle);
-    window.addEventListener("scroll", scrollFunction);
+    window.addEventListener("scroll", checkScroll);
 
 })();
 
