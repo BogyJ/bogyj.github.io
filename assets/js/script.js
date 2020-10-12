@@ -13,12 +13,22 @@
 
         if (currentDirection === 1) {
             header.classList.remove("hide");
+
+            if (window.scrollY === 0) {
+                header.style.background = "transparent";
+            }
+
+            header.style.background = "rgba(23, 42, 69, .8)";
         }
     }
 
     function checkScroll() {
         // 0 - initial, 1 - scroll up, 2 - scroll down
         currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+        if (window.scrollY === 0) {
+            header.style.background = "transparent";
+        }
 
         if (currentScroll > previousScroll) {
             currentDirection = 2;
@@ -37,6 +47,7 @@
     logo.addEventListener("click", () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
+        header.style.background = "transparent";
     });
     
     function handleNavigationToggle() {
@@ -73,12 +84,14 @@
             navLinks.forEach(el => {
                 el.addEventListener("click", handleNavigationToggle);
             });
+        } else {
+            window.addEventListener("resize", handleNavigationToggle);
+            window.addEventListener("scroll", checkScroll);
+            console.log("AA");
         }
     }
     
     window.addEventListener("load", init);
-    window.addEventListener("resize", handleNavigationToggle);
-    window.addEventListener("scroll", checkScroll);
 
     document.getElementById("projects-link").addEventListener("click", () => {
         document.getElementById("projects").scrollIntoView();
