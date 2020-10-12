@@ -5,6 +5,14 @@ function handleNavigationToggle() {
     let header = document.getElementById("header");
     let sectionsList = document.querySelector(".header__navigation-sections-list");
     
+    if (window.innerWidth >= 768) {
+        if (header.className.includes("nav-closed")) {
+            sectionsList.style.right = "0";
+            header.classList.remove("nav-closed");
+        }
+        return;
+    }
+    
     if (header.className.includes("nav-open")) {
         sectionsList.style.animation = "slideOut .4s linear";
         sectionsList.style.top = 0;
@@ -22,4 +30,15 @@ function handleNavigationToggle() {
     }
 }
 
+function init() {
+    if (window.innerWidth < 768) {
+        navToggleButton.addEventListener("click", handleNavigationToggle);
+        navLinks.forEach(el => {
+            el.addEventListener("click", handleNavigationToggle);
+        });
+    }
+}
+
+window.addEventListener("load", init);
+window.addEventListener("resize", handleNavigationToggle);
 
