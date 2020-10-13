@@ -52,7 +52,7 @@
     
     function handleNavigationToggle() {
         let sectionsList = document.querySelector(".header__navigation-sections-list");
-        
+
         if (window.innerWidth >= 1025) {
             if (header.className.includes("nav-closed")) {
                 sectionsList.style.right = "0";
@@ -90,10 +90,6 @@
     }
     
     window.addEventListener("load", init);
-    window.addEventListener("resize", () => {
-        location.reload();
-        handleNavigationToggle();
-    });
 
     document.getElementById("projects-link").addEventListener("click", () => {
         document.getElementById("projects").scrollIntoView();
