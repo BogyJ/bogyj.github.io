@@ -306,6 +306,7 @@ body {
         margin: 7rem auto 0 auto;
         background-size: cover;
         background-attachment: fixed;
+        transition: background-position 5s ease-in-out;
 
         &-overlay {
             padding: 1.2rem;
@@ -368,14 +369,23 @@ body {
 
 .raab {
     background-image: url(../img/raab.jpg);
+    background-position: top;
 }
 
 .mobilnifarmer {
     background-image: url(../img/MobilniFarmer.jpg);
+    background-position: top;
 }
 
 .cirichomeinvest {
     background-image: url(../img/cirichomeinvest.jpg);
+    background-position: top;
+}
+
+.raab:hover,
+.mobilnifarmer:hover,
+.cirichomeinvest:hover {
+    background-position: bottom;
 }
 
 .section-about {

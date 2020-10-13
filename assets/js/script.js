@@ -87,7 +87,6 @@
         } else {
             window.addEventListener("resize", handleNavigationToggle);
             window.addEventListener("scroll", checkScroll);
-            console.log("AA");
         }
     }
     
