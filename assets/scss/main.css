@@ -479,6 +479,11 @@ body {
   padding: 3rem;
 }
 
+.section-about-content-text {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .section-about-content .technologies {
   display: -ms-grid;
   display: grid;
@@ -1118,8 +1123,8 @@ footer .rights {
     width: 80%;
   }
   .section-about-content img {
-    width: auto;
     display: block;
+    width: 40%;
     margin: 4rem auto;
     border: 3px solid #ccd6f6;
     border-radius: 3px;
@@ -1132,8 +1137,9 @@ footer .rights {
     padding: 10px 20px;
     height: 600px;
     border-radius: 5px;
-    margin-right: 5rem;
-    margin-left: -5rem;
+    margin-top: 15rem;
+    margin-right: 3rem;
+    margin-left: -3rem;
     background-color: #172a45;
     -webkit-box-shadow: 0 0 11px rgba(2, 12, 27, 0.7);
             box-shadow: 0 0 11px rgba(2, 12, 27, 0.7);

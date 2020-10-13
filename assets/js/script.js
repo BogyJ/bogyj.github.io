@@ -85,12 +85,15 @@
                 el.addEventListener("click", handleNavigationToggle);
             });
         } else {
-            window.addEventListener("resize", handleNavigationToggle);
             window.addEventListener("scroll", checkScroll);
         }
     }
     
     window.addEventListener("load", init);
+    window.addEventListener("resize", () => {
+        location.reload();
+        handleNavigationToggle();
+    });
 
     document.getElementById("projects-link").addEventListener("click", () => {
         document.getElementById("projects").scrollIntoView();

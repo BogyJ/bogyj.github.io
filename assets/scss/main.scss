@@ -403,6 +403,11 @@ body {
         padding: 3rem;
     }
 
+    &-content-text {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     &-content .technologies {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1014,8 +1019,8 @@ footer {
             width: 80%;
 
             & img {
-                width: auto;
                 display: block;
+                width: 40%;
                 margin: 4rem auto;
                 border: 3px solid $lightest-slate;
                 border-radius: 3px;
@@ -1029,8 +1034,9 @@ footer {
                 padding: 10px 20px;
                 height: 600px;
                 border-radius: 5px;
-                margin-right: 5rem;
-                margin-left: -5rem;
+                margin-top: 15rem;
+                margin-right: 3rem;
+                margin-left: -3rem;
                 background-color: $light-navy;
                 box-shadow: 0 0 11px $navy-shadow;
             }
