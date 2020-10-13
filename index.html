@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <title>Bogdan Jovanović | curriculum vitae</title>
+        <title>Bogdan Jovanović</title>
         
         <link rel="stylesheet" href="assets/scss/main.css" type="text/css">
 
@@ -165,18 +165,18 @@
         </header>
         
         <main>
-            <section class="section-welcome">
-                <span class="greetings">Hi, my name is</span>
-                <h2 class="heading-primary">Bogdan Jovanović</h2>
-                <h2 class="heading-seconday">I develop websites.</h2>
-                <p class="paragraph">I'm a student and web developer based in Belgrade, Serbia. I develop (and occasionally design) things for the web.</p>
-                <a class="link-button projects-link">View Projects</a>
+            <section class="section-welcome fade-in-up">
+                <span class="greetings faders">Hi, my name is</span>
+                <h2 class="heading-primary faders">Bogdan Jovanović</h2>
+                <h2 class="heading-seconday faders">I develop websites.</h2>
+                <p class="paragraph faders">I'm a student and web developer based in Belgrade, Serbia. I develop (and occasionally design) things for the web.</p>
+                <a class="link-button projects-link faders" id="projects-link-2">View Projects</a>
             </section>
 
             <section class="section-projects" id="projects">
                 <h2 class="section-heading-primary align-center"><span class="section-number">01.</span> Projects </h2>
 
-                <div class="project">
+                <div class="project fade-in-right">
                     <div class="image__background raab">
                         <div class="image__background-overlay flex-right">
                             <h3 class="section-heading-secondary align-right">Raab Rohranlagenbau Website</h3>
@@ -203,7 +203,7 @@
                     </div>
                 </div>
 
-                <div class="project mobilnifarmer-project">
+                <div class="project mobilnifarmer-project fade-in-left">
                     <div class="image__background mobilnifarmer">
                         <div class="image__background-overlay flex-left">
                             <h3 class="section-heading-secondary align-left">MobilniFarmer App</h3>
@@ -241,7 +241,7 @@
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project fade-in-right">
                     <div class="image__background cirichomeinvest">
                         <div class="image__background-overlay flex-right">
                             <h3 class="section-heading-secondary align-right">Ciric Home Invest Website</h3>
@@ -270,10 +270,10 @@
             </section>
 
             <section class="section-about" id="about">
-                <h2 class="section-heading-primary align-center"><span class="section-number">02.</span> About me </h2>
+                <h2 class="section-heading-primary align-center fade-in-down"><span class="section-number">02.</span> About me </h2>
                 <div class="section-about-content">
-                  <img src="assets/img/profile.jpg" alt="Bogdan Jovanović">
-                  <div class="section-about-content-text">
+                  <img src="assets/img/profile.jpg" alt="Bogdan Jovanović" class="fade-in-right">
+                  <div class="section-about-content-text fade-in-left">
                     <p class="paragraph">I'm a student in the Faculty of Informatics at the University of Singidunum  based in Serbia, Belgrade. Currently I'm on my final year of education and I'm looking for a job.</p><br>
                     <p class="paragraph">I continuously improve myself being a web developer and a programmer. I also have experience making several websites.</p><br>
                     <p class="paragraph">Technologies that I'm familiar with:</p>
@@ -299,10 +299,10 @@
             </section>
 
             <section class="section__contact" id="contact">
-                <h2 class="section-heading-primary align-center"><span class="section-number">03.</span> Contact me </h2>
-                <h3 class="section__contact-heading-secondary">Let's stop being strangers!</h3>
-                <p class="paragraph align-center">Feel free to get in touch. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-                <a href="mailto:bogdanjovanovicdev@gmail.com" class="link-button">Contact</a>
+                <h2 class="section-heading-primary align-center fade-in-down"><span class="section-number">03.</span> Contact me </h2>
+                <h3 class="section__contact-heading-secondary fade-in-right">Let's stop being strangers!</h3>
+                <p class="paragraph align-center fade-in-left">Feel free to get in touch. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                <a href="mailto:bogdanjovanovicdev@gmail.com" class="link-button fade-in-up">Contact</a>
             </section>
         </main>
 
@@ -376,5 +376,6 @@
 		
 
         <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/observers.js"></script>
     </body>
 </html>

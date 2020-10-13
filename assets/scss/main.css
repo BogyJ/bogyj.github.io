@@ -39,6 +39,8 @@ body {
   margin: 0 auto;
   position: relative;
   width: 90vw;
+  -webkit-animation: fadeIn .5s ease-in-out;
+          animation: fadeIn .5s ease-in-out;
 }
 
 .header__logo-text {
@@ -262,6 +264,184 @@ body {
 
 .align-center {
   text-align: center;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  50% {
+    opacity: .3;
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  50% {
+    opacity: .3;
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: -webkit-box;
+    display: flex;
+    opacity: .5;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: .5;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: -webkit-box;
+    display: flex;
+    opacity: .5;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: .5;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  50% {
+    opacity: .3;
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  50% {
+    opacity: .3;
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  -webkit-animation: fadeInUp .7s linear;
+          animation: fadeInUp .7s linear;
+}
+
+.fade-in-right {
+  -webkit-animation: fadeInRight .7s linear;
+          animation: fadeInRight .7s linear;
+}
+
+.fade-in-left {
+  -webkit-animation: fadeInLeft .7s linear;
+          animation: fadeInLeft .7s linear;
+}
+
+.fade-in-down {
+  -webkit-animation: fadeInDown .7s linear;
+          animation: fadeInDown .7s linear;
 }
 
 .section-welcome {
@@ -1198,6 +1378,30 @@ footer .rights {
   }
   footer .rights {
     width: 300px;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */

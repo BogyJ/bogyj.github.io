@@ -41,6 +41,7 @@ body {
     margin: 0 auto;
     position: relative;
     width: 90vw;
+    animation: fadeIn .5s ease-in-out;
 
     &__logo-text {
         color: $green;
@@ -224,6 +225,86 @@ body {
     text-align: center;
 }
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    50% {
+        opacity: .3;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(-100%);
+        display: none;
+        opacity: 0;
+    }
+    50% {
+        display: flex;
+        opacity: .5;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(100%);
+        display: none;
+        opacity: 0;
+    }
+    50% {
+        display: flex;
+        opacity: .5;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: .3;
+        transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp .7s linear;
+}
+
+.fade-in-right {
+    animation: fadeInRight .7s linear;
+}
+
+.fade-in-left {
+    animation: fadeInLeft .7s linear;
+}
+
+.fade-in-down {
+    animation: fadeInDown .7s linear;
+}
+
 .section-welcome {
     height: 90vh;
     padding-left: 2rem;
@@ -295,6 +376,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 8rem;
+    
 
     & .project {
         margin-bottom: 6rem;
@@ -1108,6 +1190,25 @@ footer {
 
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+// .fade-in {
+//     opacity: 0;
+//     transition: opacity .5s ease-in;
+// }
+
+// .fade-in.appear {
+//     opacity: 1;
+// }
 
 

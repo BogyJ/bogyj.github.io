@@ -98,6 +98,10 @@
     document.getElementById("projects-link").addEventListener("click", () => {
         document.getElementById("projects").scrollIntoView();
     });
+
+    document.getElementById("projects-link-2").addEventListener("click", () => {
+        document.getElementById("projects").scrollIntoView();
+    });
     
     document.getElementById("about-link").addEventListener("click", () => {
         document.getElementById("about").scrollIntoView();
