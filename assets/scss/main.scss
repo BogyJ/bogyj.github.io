@@ -1015,12 +1015,15 @@ footer {
         &-content {
             display: flex;
             flex-direction: row;
-            margin: 10rem auto 0 auto;
+            align-items: center;
+            justify-content: center;
+            margin: -5rem auto 0 auto;
             width: 80%;
 
             & img {
                 display: block;
-                width: 40%;
+                width: 30%;
+                height: auto;
                 margin: 4rem auto;
                 border: 3px solid $lightest-slate;
                 border-radius: 3px;
@@ -1032,13 +1035,22 @@ footer {
 
             &-text {
                 padding: 10px 20px;
-                height: 600px;
+                width: 40%;
+                height: auto;
                 border-radius: 5px;
                 margin-top: 15rem;
                 margin-right: 3rem;
                 margin-left: -3rem;
                 background-color: $light-navy;
                 box-shadow: 0 0 11px $navy-shadow;
+
+                & .paragraph {
+                    font-size: 1.4rem;
+                }
+
+                & .technologies > li {
+                    font-size: 1.4rem;
+                }
             }
 
 

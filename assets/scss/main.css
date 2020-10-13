@@ -1119,12 +1119,19 @@ footer .rights {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 10rem auto 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: -5rem auto 0 auto;
     width: 80%;
   }
   .section-about-content img {
     display: block;
-    width: 40%;
+    width: 30%;
+    height: auto;
     margin: 4rem auto;
     border: 3px solid #ccd6f6;
     border-radius: 3px;
@@ -1135,7 +1142,8 @@ footer .rights {
   }
   .section-about-content-text {
     padding: 10px 20px;
-    height: 600px;
+    width: 40%;
+    height: auto;
     border-radius: 5px;
     margin-top: 15rem;
     margin-right: 3rem;
@@ -1143,6 +1151,12 @@ footer .rights {
     background-color: #172a45;
     -webkit-box-shadow: 0 0 11px rgba(2, 12, 27, 0.7);
             box-shadow: 0 0 11px rgba(2, 12, 27, 0.7);
+  }
+  .section-about-content-text .paragraph {
+    font-size: 1.4rem;
+  }
+  .section-about-content-text .technologies > li {
+    font-size: 1.4rem;
   }
   .section__contact-heading-secondary {
     font-size: 3rem;
