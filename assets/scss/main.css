@@ -39,8 +39,6 @@ body {
   margin: 0 auto;
   position: relative;
   width: 90vw;
-  -webkit-animation: fadeIn .5s ease-in-out;
-          animation: fadeIn .5s ease-in-out;
 }
 
 .header__logo-text {
@@ -425,23 +423,23 @@ body {
 }
 
 .fade-in-up {
-  -webkit-animation: fadeInUp .7s linear;
-          animation: fadeInUp .7s linear;
+  -webkit-animation: fadeInUp .9s linear;
+          animation: fadeInUp .9s linear;
 }
 
 .fade-in-right {
-  -webkit-animation: fadeInRight .7s linear;
-          animation: fadeInRight .7s linear;
+  -webkit-animation: fadeInRight .9s linear;
+          animation: fadeInRight .9s linear;
 }
 
 .fade-in-left {
-  -webkit-animation: fadeInLeft .7s linear;
-          animation: fadeInLeft .7s linear;
+  -webkit-animation: fadeInLeft .9s linear;
+          animation: fadeInLeft .9s linear;
 }
 
 .fade-in-down {
-  -webkit-animation: fadeInDown .7s linear;
-          animation: fadeInDown .7s linear;
+  -webkit-animation: fadeInDown .9s linear;
+          animation: fadeInDown .9s linear;
 }
 
 .section-welcome {
@@ -766,7 +764,7 @@ footer .rights {
   .left-social-icons {
     position: fixed;
     bottom: 0;
-    left: 4rem;
+    left: 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -810,7 +808,7 @@ footer .rights {
   .right-email {
     position: fixed;
     bottom: 0;
-    right: -48px;
+    right: -5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -831,6 +829,8 @@ footer .rights {
     font-size: 1.1rem;
     display: block;
     margin: 0 auto;
+    letter-spacing: 1.6px;
+    text-decoration: none;
     color: #ccd6f6;
   }
   .right-email .line {
@@ -1403,5 +1403,10 @@ footer .rights {
   100% {
     opacity: 1;
   }
+}
+
+.fade-in {
+  -webkit-animation: fadeIn .9s linear;
+          animation: fadeIn .9s linear;
 }
 /*# sourceMappingURL=main.css.map */

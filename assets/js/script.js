@@ -79,6 +79,10 @@
     }
     
     function init() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        header.style.background = "transparent";
+        
         if (window.innerWidth < 1025) {
             navToggleButton.addEventListener("click", handleNavigationToggle);
             navLinks.forEach(el => {

@@ -41,7 +41,6 @@ body {
     margin: 0 auto;
     position: relative;
     width: 90vw;
-    animation: fadeIn .5s ease-in-out;
 
     &__logo-text {
         color: $green;
@@ -290,19 +289,19 @@ body {
 }
 
 .fade-in-up {
-    animation: fadeInUp .7s linear;
+    animation: fadeInUp .9s linear;
 }
 
 .fade-in-right {
-    animation: fadeInRight .7s linear;
+    animation: fadeInRight .9s linear;
 }
 
 .fade-in-left {
-    animation: fadeInLeft .7s linear;
+    animation: fadeInLeft .9s linear;
 }
 
 .fade-in-down {
-    animation: fadeInDown .7s linear;
+    animation: fadeInDown .9s linear;
 }
 
 .section-welcome {
@@ -575,7 +574,7 @@ footer {
     .left-social-icons {
         position: fixed;
         bottom: 0;
-        left: 4rem;
+        left: 5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -608,7 +607,7 @@ footer {
     .right-email {
         position: fixed;
         bottom: 0;
-        right: -48px;
+        right: -5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -619,6 +618,8 @@ footer {
             font-size: 1.1rem;
             display: block;
             margin: 0 auto;
+            letter-spacing: 1.6px;
+            text-decoration: none;
             color: $lightest-slate;
         }
 
@@ -1202,13 +1203,8 @@ footer {
     }
 }
 
-// .fade-in {
-//     opacity: 0;
-//     transition: opacity .5s ease-in;
-// }
-
-// .fade-in.appear {
-//     opacity: 1;
-// }
+.fade-in {
+    animation: fadeIn .9s linear;
+}
 
 
