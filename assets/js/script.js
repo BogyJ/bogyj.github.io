@@ -111,5 +111,5 @@
         document.getElementById("contact").scrollIntoView();
     });
 
-})();
+}());
 
